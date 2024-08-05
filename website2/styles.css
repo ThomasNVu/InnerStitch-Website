@@ -1,0 +1,259 @@
+* {
+    font-family: "Josefin Sans", sans-serif, 'Times New Roman';
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: #F2F2F2;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+body, html {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    display: flex;
+    align-items: center;
+    background-color: #010D00;
+    padding: 0 5%;
+}
+
+header {
+    justify-content: space-between;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1000;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    height: 10vw;
+}
+
+header .left, footer .left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 75px;
+    width: 75px;
+    margin-right: 10px;
+}
+
+.hero, header nav {
+    font-size: 24px;
+    font-weight: light;
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.section-1 {
+    margin-top: 4rem;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+.section-2 {
+    height: 40vw;
+    width: auto;
+    background: linear-gradient(#010D00, #485256);
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+}
+
+.section-2 .card-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.background {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.background img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.title {
+    margin-top: -10%;
+    text-align: center;
+    gap: 1rem;
+}
+
+.title h1 {
+    font-size: 4.5vw;
+    font-weight: 300;
+}
+
+.title .top {
+    margin: -.5vw; /*Need to adjust this after page is finished to vh*/
+}
+
+.title .bottom {
+    margin-top: -.5vw; /*Need to adjust this after page is finished to vh*/
+}
+
+.bracket-text {
+    font-size: 2.25vw;
+    font-weight: lighter;
+    margin-top: -3vw;
+}
+
+.card {
+    position: relative;
+    margin: 0 3vw;
+    width: 15vw;
+    height: auto;
+    background: linear-gradient(#64858C,#4A5559);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    min-width: 100px;
+    min-height: 140px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.section-2 h1 {
+    font-size: 4.5vw;
+    margin-left: 2.5vw;
+    font-weight: 500;
+}
+
+.section-3 {
+    position: relative;
+    text-align: center;
+}
+
+.section-3 .box-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 54vw;
+    width: 67vw;
+    background-color: rgba(255, 255, 255, 0.5); /* Use rgba for transparency */
+    z-index: 1; /* Set a lower z-index */
+    border-radius: 32px;
+}
+
+.section-3 .background img {
+    filter: brightness(100%);
+}
+
+.section-3 .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 2; /* Set a higher z-index */
+}
+
+.section-3 h1, .section-3 .poem, .section-3 a {
+    z-index: 2; /* Ensure text and button are above the overlay */
+}
+
+.section-3 h1 {
+    font-size: 4.5vw;
+    font-weight: 500;
+
+    color: black;
+    margin-top: -12vw;
+    margin-bottom: 4vw;
+}
+
+.section-3 .poem {
+    font-size: 2.32vw;
+    font-weight: light;
+}
+
+.section-3 h3 {
+    margin-top: -2vw;
+    color: black;
+}
+
+.section-3 button {
+    background-color: #010D00;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 2vw;
+    margin-bottom: -12vw;
+    border-radius: 12px;
+    width: 34vw;
+    height: 6vw;
+    font-size: 2.2vw;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 1.1vw;
+}
+
+.social-icons a i {
+    font-size: 2vw;
+}
