@@ -226,7 +226,7 @@ header .left, footer .left {
     color: black;
 }
 
-.section-3 button {
+.section-3 button { 
     background-color: #010D00;
     border: 0;
     margin: 0 auto;
@@ -256,4 +256,78 @@ header .left, footer .left {
 
 .social-icons a i {
     font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+    header, footer {
+        padding: 0 2%;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .logo-img {
+        height: 50px;
+        width: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero, header nav {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .section-1 {
+        margin-top: 6rem;
+    }
+
+    .title h1 {
+        font-size: 6vw;
+    }
+
+    .bracket-text {
+        font-size: 4vw;
+    }
+
+    .card {
+        margin: 10px;
+        width: 40vw;
+        min-width: 100px;
+        min-height: 140px;
+    }
+
+    .section-2 h1 {
+        font-size: 6vw;
+        margin-left: 5vw;
+    }
+
+    .section-3 .box-overlay {
+        height: 80vw;
+        width: 90vw;
+    }
+
+    .section-3 h1 {
+        font-size: 6vw;
+        margin-top: -6vw;
+        margin-bottom: 6vw;
+    }
+
+    .section-3 .poem {
+        font-size: 4vw;
+    }
+
+    .section-3 button {
+        width: 50vw;
+        height: 10vw;
+        font-size: 4vw;
+    }
+
+    .social-icons a i {
+        font-size: 4vw;
+    }
 }
