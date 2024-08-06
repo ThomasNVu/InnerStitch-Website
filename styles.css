@@ -259,16 +259,6 @@ header .left, footer .left {
 }
 
 @media (max-width: 768px) {
-    header, footer {
-        padding: 0 2%;
-    }
-
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-        width: 100%;
-    }
 
     .logo-img {
         height: 50px;
@@ -283,7 +273,7 @@ header .left, footer .left {
     }
 
     .section-1 {
-        margin-top: 6rem;
+        margin-top: 65px;
     }
 
     .title h1 {
@@ -296,7 +286,7 @@ header .left, footer .left {
 
     .card {
         margin: 10px;
-        width: 40vw;
+        width: 10vw;
         min-width: 100px;
         min-height: 140px;
     }
@@ -307,24 +297,24 @@ header .left, footer .left {
     }
 
     .section-3 .box-overlay {
-        height: 80vw;
-        width: 90vw;
+        height: 40vw;
+        width: 45vw;
     }
 
     .section-3 h1 {
-        font-size: 6vw;
-        margin-top: -6vw;
-        margin-bottom: 6vw;
+        font-size: 3vw;
+        margin-top: -3vw;
+        margin-bottom: 3vw;
     }
 
     .section-3 .poem {
-        font-size: 4vw;
+        font-size: 2vw;
     }
 
     .section-3 button {
-        width: 50vw;
-        height: 10vw;
-        font-size: 4vw;
+        width: 12vw;
+        height: 6vw;
+        font-size: 2vw;
     }
 
     .social-icons a i {
