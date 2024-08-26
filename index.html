@@ -1,102 +1,85 @@
-div<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InnerStitch Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styling.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+    <body>
+        <section class="header">
+            <nav>
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/InnerStitch_Studio_Logo-20.png">
+                        <div>
+                            <p>INNERSTITCH</p>
+                            <p>STUDIO</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="nav-links" id="navLinks">
+                    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">HOME</a></li> 
+                        <li><a href="">GAMES</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            </nav>
 
-<body>
-    <header>
-        <div class="left">
-            <div class="logo" aria-label="InnerStitch Logo">
-                <img class="logo-img" src="images/InnerStitch_Studio_Logo-20.png">
-            </div>
-            <div class="hero">
-                <div>INNERSTITCH</div>
-                <div>STUDIO</div>
-            </div>
+        <div class="text-box">
+            <h1>INNERSTITCH<br>STUDIO</h1>
+            <p>Storytelling Together</p>
+            <a href="" class="hero-btn">This is a button</a>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#about">ABOUT US</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="section-1">
-            <div class="background">
-                <img src="images/Home_Page_Background.png">
-            </div>
-            <div class="overlay">
-                <div class="title">
-                    <h1 class="top">INNERSTITCH</h1>
-                    <h1 class="bottom">STUDIO</h1>
-            </div>
-                <p class="bracket-text">Storytelling together.</p>
-            </div>  
         </section>
 
+        <!-----Games----->
 
-        <section class="section-2">
+        <section class="games">
             <h1>Games</h1>
-            <div class="big-card-container">
-                <div class="card-container">
-                    <div class="card" onclick="">
-                        <img src="images/Laugh_Attack_Button.png" alt="Laugh Attack Page">
-                        <div class="card-text">Laugh Attack</div>
-                    </div>
-                    <div class="card">
-                        <div class="text">Coming Soon</div>
-                    </div>
-                </div>
+
+            <div class="row">
+                <img src="images/Laugh_Attack_Button.png" id="laugh-banner">
+                <img src="images/Laugh_Attack_Button.png" id="laugh-banner">
             </div>
         </section>
 
-        <section class="section-3">
-            <div class="background">
-                <img src="images/the-team.jpg">
-            </div>
-            <div class="box">
-                <div class="box-overlay"></div>
-                <h1>MEET the TEAM</h1>
-                <div class="poem">
-                    <h3>We are Weavers of Dreams,</h3>
-                    <h3>Creators of Worlds,</h3>
-                    <h3>Writer of Life.</h3>
-                    <h3>Brought to you by Gamers.</h3>
-                </div>
-                <a href="" target="_blank">
-                    <button>Our Team</button>
-                </a>
+
+
+        <section class="mtt">
+            <div class="background-block">
+                <h1>Meet the team</h1>
+                <p>We are Weavers of Dreams,<br>Creators of Worlds,<br>Writer of Life.<br>Brought to you by Gamers.</p>
+                <a href="">CONTACT US</a>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <div class="left">
-            <div class="logo" aria-label="InnerStitch Logo">
-                <img class="logo-img" src="images/InnerStitch_Studio_Logo-20.png">
-            </div>
-            <div class="hero">
-                <div>INNERSTITCH</div>
-                <div>STUDIO</div>
-            </div>
-        </div>
-        <div class="social-icons">
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-            <a href=""><i class="fa-brands fa-discord"></i></a>
-            <a href=""><i class="fa-brands fa-tiktok"></i></a>
-        </div>
-    </footer>
-</body>
+        <footer>
+        </footer>
 
+        <script>
+
+            <!--Toggle for Javascript-->
+
+            let navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-19rem";
+            }
+        </script>
+
+    </body>
 </html>

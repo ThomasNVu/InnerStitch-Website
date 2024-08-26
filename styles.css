@@ -1,352 +1,310 @@
 * {
-    font-family: "Josefin Sans", sans-serif, 'Times New Roman';
+    margin: 0;
+    padding: 0;
     font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
+    font-family: "Josefin Sans", sans-serif, 'Times New Roman';
     color: #F2F2F2;
 }
 
-a:link, a:visited, a:active {
-    text-decoration: none;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-}
-
-header, footer {
-    display: flex;
-    align-items: center;
-    background-color: #010D00;
-    padding: 0 5%;
-}
-
-header {
-    justify-content: space-between;
-    height: 65px;
-    position: fixed;
-    top: 0;
-    width: 90%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    z-index: 1000;
-}
-
-footer {
-    display: flex;
-    position: relative;
-    height: 10vw;
-    margin-top: auto;
-}
-
-header .left, footer .left {
-    display: flex;
-    align-items: center;
-}
-
-.logo-img {
-    height: 75px;
-    width: 75px;
-    margin-right: 10px;
-}
-
-.hero, header nav {
-    font-size: 24px;
-    font-weight: light;
-}
-
-.navbar ul {
-    list-style-type: none;
-    text-decoration: none;
-}
-
-.section-1 {
-    margin-top: 4rem;
-    position: relative;
+.header {
+    min-height: 100vh;
     width: 100%;
-    overflow: hidden; /* Prevents horizontal scrolling */
+    background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/Home_Page_Background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
-.section-2 {
-    height: 40vw;
-    width: auto;
-    background: linear-gradient(#010D00, #485256);
+nav {
     display: flex;
-    flex-direction: column;
-    min-height: 330px;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.section-2 .card-container {
+nav img {
+    width: 6rem;
+}
+
+.nav-logo a {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-decoration: none;
 }
 
-.background {
-    width: 100%;
-    height: 50vh; /* Set a fixed height */
-    z-index: -1;
-    overflow: hidden;
+.nav-logo p {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    transition: 0.75s;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
     position: relative;
 }
 
-.background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(50%);
-    z-index: -1;
-    transition: width 0.3s ease;
+.nav-links ul li a { 
+    color: #F2F2F2;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
-.overlay {
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 3rem;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 300px;
+        top: 0;
+        right: -19rem;
+        text-align: left;
+        z-index: 2;
+    }
+
+    nav .fa-solid{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    } 
+}
+
+/*---------Course--------*/
+
+.games {
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background: linear-gradient(#010D00, #485256);
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #F2F2F2
+}
+
+p {
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: 5% 0 10% 10%;
+    margin-bottom: 0;
+    gap: 5vw;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.games img {
+    height: 300px;
+    margin-bottom: 500px;
+}
+
+.games h1 {
+    text-align: left;
+    margin-left: 10%;
+}
+
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.games-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.team {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.team-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-col img {
+    width: 100%;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(266,0,0,0.7);
+}
+
+.layer h3 {
     width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.title {
-    margin-top: -10%;
-    text-align: center;
-    gap: 1rem;
-}
-
-.title h1 {
-    font-size: 4.5vw;
-    font-weight: 300;
-}
-
-.title .top {
-    margin: -.5vw; /*Need to adjust this after page is finished to vh*/
-}
-
-.title .bottom {
-    margin-top: -.5vw; /*Need to adjust this after page is finished to vh*/
-}
-
-.bracket-text {
-    font-size: 2.25vw;
-    font-weight: lighter;
-    margin-top: -3vw;
-}
-
-.card {
-    position: relative;
-    margin: 0 3vw;
-    width: 15vw;
-    height: auto;
-    background: linear-gradient(#64858C, #4A5559);
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    text-align: center;
-    min-width: 100px;
-    min-height: 140px;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.card .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    font-weight: 500;
     color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.section-2 h1 {
-    font-size: 4.5vw;
-    margin-left: 2.5vw;
-    font-weight: 500;
-}
-
-.section-3 {
-    position: relative;
-    text-align: center;
-}
-
-.section-3 .box-overlay {
-    position: absolute;
-    top: 50%;
+    font-size: 26px;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    height: 54vw;
-    width: 67vw;
-    background-color: rgba(255, 255, 255, 0.5); /* Use rgba for transparency */
-    z-index: 1; /* Set a lower z-index */
-    border-radius: 32px;
-}
-
-.section-3 .background img {
-    filter: brightness(100%);
-}
-
-.section-3 .box {
+    transform: translateX(-50%);
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    z-index: 2; /* Set a higher z-index */
+    transition: .5s;
 }
 
-.section-3 h1, .section-3 .poem, .section-3 a {
-    z-index: 2; /* Ensure text and button are above the overlay */
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
 }
 
-.section-3 h1 {
-    font-size: 4.5vw;
-    font-weight: 500;
-    color: black;
-    margin-top: -12vw;
-    margin-bottom: 4vw;
-}
-
-.section-3 .poem {
-    font-size: 2.32vw;
-    font-weight: light;
-}
-
-.section-3 h3 {
-    margin-top: -2vw;
-    color: black;
-}
-
-.section-3 button {
-    background-color: #010D00;
-    border: 0;
+.mtt {
     margin: 0 auto;
-    margin-top: 2vw;
-    margin-bottom: -12vw;
-    border-radius: 12px;
-    width: 34vw;
-    height: 6vw;
-    font-size: 2.2vw;
-    font-weight: 400;
-    cursor: pointer;
+    height: 440px;
+    width: 100%;
+    background-image: url(images/the-team.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 300px 0;
 }
 
-.social-icons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
+.background-block {
+    background-color: rgba(225, 225, 225, 0.5); /* Dark semi-transparent background */
+    border-radius: 15px; /* Rounded corners */
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px 20px; /* Add padding inside the box */
+    text-align: center;
+    color: white; /* White text color */
 }
 
-.social-icons a {
+.background-block h1 {
+    font-size: 36px; /* Adjust font size */
+    font-weight: bold; /* Make the font bold */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.background-block p {
+    font-size: 18px; /* Adjust font size */
+    font-weight: normal;
+    margin-bottom: 30px; /* Add space below the text */
+    line-height: 1.5;
+}
+
+.background-block a {
+    display: inline-block;
     text-decoration: none;
-    margin: 1.1vw;
+    color: white; /* White text color */
+    background-color: black; /* Black background for the button */
+    padding: 12px 30px;
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.social-icons a i {
-    font-size: 2vw;
-}
-
-@media (max-width: 1200px) {
-    .background img {
-        width: 110%;
-    }
-}
-
-@media (max-width: 992px) {
-    .background img {
-        width: 120%;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-img {
-        height: 50px;
-        width: 50px;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .hero, header nav {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .background img {
-        width: 130%;
-    }
-
-    .section-1 {
-        margin-top: 65px;
-    }
-
-    .title h1 {
-        font-size: 6vw;
-    }
-
-    .bracket-text {
-        font-size: 4vw;
-    }
-
-    .card {
-        margin: 10px;
-        width: 10vw;
-        min-width: 100px;
-        min-height: 140px;
-    }
-
-    .section-2 h1 {
-        font-size: 6vw;
-        margin-left: 5vw;
-    }
-
-    .section-3 .box-overlay {
-        height: 40vw;
-        width: 45vw;
-    }
-
-    .section-3 h1 {
-        font-size: 3vw;
-        margin-top: -3vw;
-        margin-bottom: 3vw;
-    }
-
-    .section-3 .poem {
-        font-size: 2vw;
-    }
-
-    .section-3 button {
-        width: 12vw;
-        height: 6vw;
-        font-size: 2vw;
-    }
-
-    .social-icons a i {
-        font-size: 4vw;
-    }
-}
-
-@media (max-width: 576px) {
-    .background img {
-        width: 140%;
-    }
+.background-block a:hover {
+    background-color: #333; /* Darker shade on hover */
 }
